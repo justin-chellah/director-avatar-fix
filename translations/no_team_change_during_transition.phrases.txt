@@ -1,0 +1,12 @@
+"Phrases"
+{
+	"Unable to join a team"
+	{
+		"en"	"Team is currently full, or players are still loading."
+	}
+
+	"Unable to take character"
+	{
+		"en"	"Character is already taken, or taken by another player!"
+	}
+}

@@ -1,0 +1,81 @@
+"Games"
+{
+	"left4dead2"
+	{
+		"Addresses"
+		{
+			"CDirector"
+			{
+				"windows"
+				{
+					"signature" "TheDirector"
+					"read" "12"
+				}
+
+				"linux"
+				{
+					"signature" "TheDirector"
+				}
+
+				"read" "0"
+			}
+		}
+
+		"Signatures"
+		{
+			"CDirector::GetPlayerCount"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x08\x56\x57\x8B\x7D\x08\x57\x8D\x45\xF8"
+				// 55 8B EC 83 EC 08 56 57 8B 7D 08 57 8D 45 F8
+
+				"linux"		"@_ZNK9CDirector14GetPlayerCountEiNS_15PlayerCountTypeE"
+			}
+
+			"CDirector::JoinNewPlayer"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x44\x8B\x15\x2A\x2A\x2A\x2A"
+				// 55 8B EC 83 EC 44 8B 15 ? ? ? ?
+
+				"linux"		"@_ZN9CDirector13JoinNewPlayerER23DirectorNewPlayerType_t"
+			}
+
+			"CDirector::NewPlayerFindAndPossessBot"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x30\x8B\x45\x08\x8B\x00"
+				// 55 8B EC 83 EC 30 8B 45 08 8B 00
+
+				"linux"		"@_ZN9CDirector26NewPlayerFindAndPossessBotER23DirectorNewPlayerType_t"
+			}
+
+			"CTerrorPlayer::UpdateTeamDesired"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x10\x57\x8B\xF9\x8B\x07\x8B\x90\x74\x07\x00\x00"
+				// 55 8B EC 83 EC 10 57 8B F9 8B 07 8B 90 74 07 00 00
+
+				"linux"		"@_ZN13CTerrorPlayer17UpdateTeamDesiredEv"
+			}
+
+			"CDirector::IsHumanSpectatorValid"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x56\x8B\x75\x08\x8B\x86\x24\x43\x00\x00"
+				// 55 8B EC 56 8B 75 08 8B 86 24 43 00 00
+
+				"linux"		"@_ZN9CDirector21IsHumanSpectatorValidEP11SurvivorBot"
+			}
+
+			"TheDirector"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x1C\x56\x57\x8B\xF9\x8B\x0D"
+				// 55 8B EC 83 EC 1C 56 57 8B F9 8B 0D
+
+				"linux"		"@TheDirector"
+			}
+		}
+	}
+}
